@@ -1,0 +1,2 @@
+# algorithmsForStudy
+mind games

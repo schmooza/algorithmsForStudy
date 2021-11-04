@@ -8,18 +8,24 @@ x = 5
 num1 = "x + 345"
 
 # evaluate lets you do bad things.
-
-print(eval(num1))
+import random
+# print(eval(num1))
 myList = []
 #unicode for characters.
 for n in range(0,10):
 	x = ord(str(n))
-	print (n, x)
+	# print (n, x)
+testCase = str(random.randint(100, 500))
 
-num2 = "564"
+print (testCase, "test case is a string")
+print(type(testCase), "the type of data ")
+
+num2 = testCase
 
 def convertUnicodeNums(x):
 	match currentDigit:
+		case 48:
+			return 0
 		case 49:
 			return 1
 		case 50:
@@ -59,28 +65,27 @@ def addZeros(n):
 	
 
 lenOfInput = len(num2)
-print(lenOfInput, "zeros to add.")
+# print(lenOfInput, "zeros to add.")
 outputTotal = 0
 
 for n in num2:
 	
-	print(lenOfInput, "length of input")
+	# print(lenOfInput, "length of input")
 	currentDigit = ord(str(n))
-	print(currentDigit)
+	# print(currentDigit)
 	# filter the number
 	outputNum = convertUnicodeNums(currentDigit)
 	# add place values
 	modifiedNumber = addZeros(lenOfInput)
 	
-	print(modifiedNumber, "debug1")
+	# print(modifiedNumber, "debug1")
 	currentNumber = outputNum * modifiedNumber
 	outputTotal += currentNumber
-	print(outputTotal, "the number is not an integer!!!")
-	print(type(outputTotal), "the output type")
 	lenOfInput -= 1
 	
-	
-	
+print("\n")
+print(outputTotal, "the number is now an integer!!!")
+print(type(outputTotal), "the output type")
 	
 	
 

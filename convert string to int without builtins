@@ -1,0 +1,87 @@
+# Given two non-negative integers num1 and num2 represented as string, return the sum of num1 and num2.
+# You must not use any built-in BigInteger library or convert the inputs to integer directly.
+
+#Notes:
+#Both num1 and num2 contains only digits 0-9.
+#Both num1 and num2 does not contain any leading zero.
+x = 5
+num1 = "x + 345"
+
+# evaluate lets you do bad things.
+
+print(eval(num1))
+myList = []
+#unicode for characters.
+for n in range(0,10):
+	x = ord(str(n))
+	print (n, x)
+
+num2 = "564"
+
+def convertUnicodeNums(x):
+	match currentDigit:
+		case 49:
+			return 1
+		case 50:
+			return 2
+		case 51:
+			return 3
+		case 52:
+			return 4
+		case 53:
+			return 5
+		case 54:
+			return 6
+		case 55:
+			return 7
+		case 56:
+			return 8
+		case 57:
+			return 9
+		case _:
+			return "error"
+	
+def addZeros(n):
+	match n:
+		case 5:
+			
+			return 10000
+		case 4:
+			return 1000
+		case 3:
+			return 100
+		case 2:
+			return 10
+		case 1:
+			return 1
+		case _:
+			return "error"
+	
+
+lenOfInput = len(num2)
+print(lenOfInput, "zeros to add.")
+outputTotal = 0
+
+for n in num2:
+	
+	print(lenOfInput, "length of input")
+	currentDigit = ord(str(n))
+	print(currentDigit)
+	# filter the number
+	outputNum = convertUnicodeNums(currentDigit)
+	# add place values
+	modifiedNumber = addZeros(lenOfInput)
+	
+	print(modifiedNumber, "debug1")
+	currentNumber = outputNum * modifiedNumber
+	outputTotal += currentNumber
+	print(outputTotal, "the number is not an integer!!!")
+	print(type(outputTotal), "the output type")
+	lenOfInput -= 1
+	
+	
+	
+	
+	
+
+

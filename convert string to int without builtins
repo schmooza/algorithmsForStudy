@@ -4,17 +4,20 @@
 #Notes:
 #Both num1 and num2 contains only digits 0-9.
 #Both num1 and num2 does not contain any leading zero.
-x = 5
-num1 = "x + 345"
-
+# x = 5
+# num1 = "x + 345"
+# # print(eval(num1))
 # evaluate lets you do bad things.
 import random
-# print(eval(num1))
-myList = []
+
+# myList = []
 #unicode for characters.
-for n in range(0,10):
-	x = ord(str(n))
-	# print (n, x)
+# use the following to find out the numbers
+
+# for n in range(0,10):
+# 	x = ord(str(n))
+# 	# print (n, x)
+
 testCase = str(random.randint(100, 500))
 
 print (testCase, "test case is a string")
